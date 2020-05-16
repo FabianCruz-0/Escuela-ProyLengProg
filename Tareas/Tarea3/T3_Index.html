@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 3</title>
 </head>
 <body>
     <span><a href="../Tarea2/T2_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +13,53 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <p> <h3>Del lenguaje de <u>Prolog</u> investigar:</h3><br>
+             Símbolos, sintaxis, esqueleto de los programas <br>
+             aplicación a descargar para editar y ejecutar <br>
+             a que tipo de paradigma pertenece <br>
+             Un ejemplo de un programa escrito en ese lenguaje</p>
     </center>
     <hr>
+    <div class="container">
+        <p><u><i>Símbolos, sintaxis, esqueleto de los programas:</i></u> <br>
+            <u>Simbolos</u>:<br>
+            + --> SUMA <br>
+            - --> RESTA <br>
+            * --> MULTIPLICACIÓN <br>
+            / --> DIVISIÓN <br>
+            // --> DIVISION ENTERA <br>
+            MOD --> RESIDUO <br>
+            ^ --> POTENCIA<br><br>
+            <u>Sintaxis</u>:<br>
+            Conjunto de caracteres válidos (máx. 128; ASCII 7 bits): <br>
+            Mayúsculas [A-Z] <br>
+            Minúsculas [a-z] <br>
+            Dígitos [0-9] <br>
+            Caracteres especiales: + - * / ^ &lt; &gt; ~ : ; . _ ? \ ( ) [ ] <br>
+            Se distinguen imprimibles de no imprimibles. <br>
+            Un programa PROLOG es una sucesión de términos:<br>
+            Constantes. <br>
+            Variables. <br>
+            Estructuras (functores). <br><br>
+            <u>Esqueleto de programa:</u><br>
+            :- initialization hello_world, halt. <br>
+            hello_world :-<br>
+            &nbsp; write('Hello, World!'), nl.
+        </p><hr>
+
+        <p><u><i>Aplicación a descargar para editar y ejecutar:</i></u> <br>
+            Necesitas descargar el SWI-Prolog en <a href="https://www.swi-prolog.org/download/stable">https://www.swi-prolog.org/download/stable.</a>
+
+        </p><hr>
+        <p><u><i>A que tipo de paradigma pertenece:</i></u> Lógico y declarativo.</p><hr>        
+        <p><u><i>Un ejemplo de un programa escrito:</i></u> <br>
+        <h4>Factorial:<br></h4>
+        factorial(N,F) :-  <br>
+        N>0, <br>
+        N1 is N-1, <br>
+        factorial(N1,F1), <br>
+        F is N * F1. <br>
+        </p>
+    </div>
 </body>
 </html>
