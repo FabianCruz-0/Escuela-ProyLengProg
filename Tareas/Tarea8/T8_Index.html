@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 8</title>
+    <style>
+        p{
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <span><a href="../Tarea7/T7_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +18,53 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <div class="container">
+        <p>
+Elabore un programa en JAVA Y RUBY que mediante un Menú de opciones permita calcular la conversión de
+escala de temperatura: <br>
+ 1. De grados Centígrados a grados Farenheit. <br>
+ 2. De grados Farenheit a grados Centígrados. <br>
+ (Nota: El cuadro de dialogo para seleccionar que sea
+usando botones: °C -> °F y otro °F -> °C)
+        </p>
+    </div>
     </center>
     <hr>
+    <center><h4>Código de Java</h4></center>
+    <pre>
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) 
+    {
+        int opcion;
+        Scanner scan = new Scanner(System.in);
+        do{
+        System.out.println("Presione 1 para: °C -> °F");
+        System.out.println("Presione 2 para: °F -> °C");
+        scan = new Scanner(System.in);
+        opcion = Integer.parseInt(scan.nextLine());
+        } while (opcion < 1 || opcion >2);
+        //Validación de entrada de opción.
+
+        if(opcion ==1) //Validación de opción a ejecutar.
+        {
+            System.out.print("Introducir los grados Celsius:");
+            double gradCel = Double.parseDouble(scan.nextLine());
+            double gradFar = (gradCel*1.8) + 32.0;
+            System.out.println("La conversión es: °" + gradFar + "F." ); //Salida.
+            } else {
+            System.out.print("Introducir los grados Farenheit:");
+            double gradFar = Double.parseDouble(scan.nextLine());
+            double gradCel = (gradFar - 32.0) * 5/9;
+            System.out.println("La conversión es: °" + gradCel + "C." ); //Salida.
+            }
+    }
+}
+    </pre>
+    <hr>
+    <center><h4>Código de Ruby</h4></center>
+    <pre>
+        
+    </pre>
 </body>
 </html>
