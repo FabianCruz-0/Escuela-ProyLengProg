@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 7</title>
 </head>
 <body>
     <span><a href="../Tarea6/T6_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +13,70 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
-    </center>
-    <hr>
+        <p> <h3>Del lenguaje de <u>R</u> investigar:</h3><br>
+            Símbolos, sintaxis, esqueleto de los programas <br>
+            aplicación a descargar para editar y ejecutar <br>
+            a que tipo de paradigma pertenece <br>
+            Un ejemplo de un programa escrito en ese lenguaje</p>
+   </center>
+   <hr>
+   <div class="container">
+       <p><u><i>Símbolos, sintaxis, esqueleto de los programas:</i></u> <br>
+        <u>Simbolos:</u><br>
+        <pre>
++ adición
+- substracción
+* multiplicación
+/ división
+^ potencia
+% % módulo o residuo
+%/% división de enteros
+        </pre>
+        <u>Sintaxis:</u></br>
+        <pre>
+Asignación de variables:
+&gt; n &lt;- 15
+&gt; n
+[1] 15
+&gt; 5 -&gt; n
+&gt; n
+[1] 5
+&gt; x &lt;- 1
+&gt; X &lt;- 10
+&gt; x
+[1] 1
+&gt; X
+[1] 10
+        </pre>
+        <u>Cuerpo de programa:</u><br>
+        <pre>
+# Hello World in R
+cat("Hello world\n")
+        </pre>
+        </p>
+       <hr><p><u><i>Aplicación a descargar para editar y ejecutar:</i></u> <br>
+        Necesitas instalar R con su respectiva versión en: <a href="https://cran.r-project.org/bin/windows/base/">https://cran.r-project.org/bin/windows/base/</a>
+    </p>
+       <hr><p><u><i>A que tipo de paradigma pertenece:</i></u> funcional, vectorial, imperativo, procedural, orientado a objetos. <br></p>
+       <hr><p><u><i>Un ejemplo de un programa escrito:</i></u> <br>
+        <h3>Factorial:</h3>
+        <pre>
+# take input from the user
+num = as.integer(readline(prompt="Enter a number: "))
+factorial = 1
+# check is the number is negative, positive or zero
+if(num < 0) {
+print("Sorry, factorial does not exist for negative numbers")
+} else if(num == 0) {
+print("The factorial of 0 is 1")
+} else {
+for(i in 1:num) {
+factorial = factorial * i
+}
+print(paste("The factorial of", num ,"is",factorial))
+}
+        </pre>
+    </p>
+   </div>
 </body>
 </html>
