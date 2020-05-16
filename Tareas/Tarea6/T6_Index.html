@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 6</title>
 </head>
 <body>
     <span><a href="../Tarea5/T5_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +13,54 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
-    </center>
-    <hr>
+        <p> <h3>Del lenguaje de <u>Haskell</u> investigar:</h3><br>
+            Símbolos, sintaxis, esqueleto de los programas <br>
+            aplicación a descargar para editar y ejecutar <br>
+            a que tipo de paradigma pertenece <br>
+            Un ejemplo de un programa escrito en ese lenguaje</p>
+   </center>
+   <hr>
+   <div class="container">
+       <p><u><i>Símbolos, sintaxis, esqueleto de los programas:</i></u><br>
+        <u>Simbolos:</u><br>
+        <pre>
+!! n–esimo elemento de una lista
+. Composición de funciones
+**, ^, ^^ Exponenciación
+*, /, ‘div‘, ‘quot‘, ‘mod‘, ‘rem‘ Multiplicación, división y residuo
++, - Suma y resta
+:, ++ Inserción y concatenación en listas
+==, \=, <, <=, >, >= Operadores relacionales
+&& “and” booleano
+|| “or” booleano
+>>, >>= Composición secuencial de acciones
+$ Aplicación
+        </pre>
+        <u>Sintaxis:</u><br>
+        <pre>
+charName 'a' = "Albert"
+charName 'b' = "Broseph"
+charName 'c' = "Cecil"
+        </pre>
+        <u>Cuerpo de un programa:</u><br>
+        <pre>
+-- Hello World in Haskell
+ 
+main = putStrLn "Hello World"
+        </pre>
+        </p>
+       <hr><p><u><i>Aplicación a descargar para editar y ejecutar:</i></u> <br>
+        Necesitas instalar el Haskell Platform en: <a href="https://www.haskell.org/platform/">https://www.haskell.org/platform/</a>
+    </p>
+       <hr><p><u><i>A que tipo de paradigma pertenece:</i></u> Funcional, no estricto, modular, fuertemente tipificado. <br></p>
+       <hr><p><u><i>Un ejemplo de un programa escrito:</i></u> <br>
+        <h3>Factorial:</h3><br>
+        <pre>
+fac :: (Integral a) => a -> a
+fac 0 = 1
+fac n = n * fac (n - 1)
+        </pre>
+    </p>
+   </div>
 </body>
 </html>
