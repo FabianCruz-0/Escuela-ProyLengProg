@@ -4,3 +4,5 @@ LENGUAJES USADOS:
 * HTML.
 * JAVA.
 * RUBY.
+
+La mayoría de págians HTML usan Bootstrap con CSS básico.
