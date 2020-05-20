@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 11</title>
 </head>
+
 <body>
     <span><a href="../Tarea10/T10_Index.html">&lt;- Anterior tarea</a></span>
     <span style=" margin-left: 30vw;"><a href="../Index_Tareas.html">&lt;- Volver al Index de Tareas.</a></span>
@@ -12,8 +16,61 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <p>
+            Construya un programa en JAVA Y RUBY. Que calcule e
+            imprima la siguiente serie para los N primeros
+            términos: -1 , 2 , 2, -3 , 4 , 4 , 4, -5 , 6, 6, 6, 6, -7... 
+        </p>
     </center>
     <hr>
+    <center>
+        <h4>Código de Java</h4>
+    </center>
+    <pre>
+import javax.swing.JOptionPane;
+
+public class Main11 {
+    public static void main(String[] args) {
+
+        String entrada;
+        String letrero = "";
+        int n;
+
+        entrada = JOptionPane.showInputDialog("Hasta que numero desea llegar");
+        n = Integer.parseInt(entrada);
+        int y=2,contador=1;
+        for(int i=1;i<=n;i++)
+        {
+            if(i%2==0)
+            {
+                for(int z=1;z<=y;z++)
+                {
+                    letrero+= i+", ";
+                    contador++;
+                    if(contador>n)
+                    {
+                        JOptionPane.showMessageDialog(null, letrero);
+                        System.exit(0);
+                    }
+                }
+                y++;
+            } else {
+                letrero+= "-"+i+", ";
+                contador++;
+            }
+        }
+        JOptionPane.showMessageDialog(null, letrero);
+    }
+}
+        
+    </pre>
+    <hr>
+    <center>
+        <h4>Código de Ruby</h4>
+    </center>
+    <pre>
+
+    </pre>
 </body>
+
 </html>
