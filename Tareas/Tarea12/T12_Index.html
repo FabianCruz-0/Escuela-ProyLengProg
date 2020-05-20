@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 12</title>
 </head>
 <body>
     <span><a href="../Tarea11/T11_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +13,67 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <p>Construya un programa en JAVA y RUBY. Que calcule e
+            imprima la siguiente serie para los N primeros
+            términos: 2, -3, -5, -7, 4, 6, -9, -11, -13,
+            8, 10, 12, -15, -17, -19, 14...</p>
     </center>
     <hr>
+    <center><h4>Código de Java</h4></center>
+    <pre>
+import javax.swing.JOptionPane;
+
+public class Main12 {
+    public static void main(String[] args) {
+
+        String entrada;
+        String letrero = "";
+        int n;
+
+        entrada = JOptionPane.showInputDialog("Cuantas veces desea realizar la serie");
+        n = Integer.parseInt(entrada);
+
+        int pos = 1;
+        int seriePos = 2;
+        int serieNeg = -3;
+        boolean turnPos = true;
+        int contadorNums = 0;
+
+        for (int i = 1; i < n; i++) {
+            if (turnPos) {
+                for (int y = 1; y <= pos; y++) {
+                    if (contadorNums >= n) {
+                        JOptionPane.showMessageDialog(null, letrero);
+                        System.exit(0);
+                    } else {
+                        letrero += seriePos + ", ";
+                        seriePos += 2;
+                        contadorNums++;
+                    }
+                }
+                turnPos = false;
+                pos++;
+            } else {
+                for (int y = 1; y <= 3; y++) {
+                    if (contadorNums >= n) {
+                        JOptionPane.showMessageDialog(null, letrero);
+                        System.exit(0);
+                    } else {
+                        letrero += serieNeg + ", ";
+                        serieNeg -= 2;
+                        contadorNums++;
+                    }
+                }
+                turnPos = true;
+            }
+        }
+    }
+}
+    </pre>
+    <hr>
+    <center><h4>Código de Ruby</h4></center>
+    <pre>
+        
+    </pre>
 </body>
 </html>
