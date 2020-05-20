@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 14</title>
 </head>
+
 <body>
     <span><a href="../Tarea13/T13_Index.html">&lt;- Anterior tarea</a></span>
     <span style=" margin-left: 30vw;"><a href="../Index_Tareas.html">&lt;- Volver al Index de Tareas.</a></span>
@@ -12,8 +16,82 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <div class="container">
+            <p style="text-align: justify;">Construya un programa en JAVA y RUBY que, al recibir
+                como datos un arreglo bidimensional de NxM
+                elementos de tipo entero y un número entero,
+                determine cuántas veces se encuentra este número
+                dentro del arreglo. <br>
+                Además, que imprima la matriz al
+                final.<br>
+                 Ejemplo:<br>
+                 Elemento a buscar: 8 <br>
+                 El 8 aparece 3 veces <br>
+            </p>
+        </div>
     </center>
     <hr>
+    <center>
+        <h4>Código de Java</h4>
+    </center>
+    <pre>
+import javax.swing.JOptionPane;
+
+public class Main14 {
+    public static void main(String[] args) {
+
+        int a[][], i, j, n, m, busq;
+        String entrada;
+
+        entrada = JOptionPane.showInputDialog("cantidad de filas: ");
+        n = Integer.parseInt(entrada);
+        entrada = JOptionPane.showInputDialog("cantidad de columnas:");
+        m = Integer.parseInt(entrada);
+
+        a = new int[n][m];
+
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+                entrada = JOptionPane.showInputDialog("A[" + (i + 1) + "][" + (j + 1) + "]=");
+                a[i][j] = Integer.parseInt(entrada);
+            }
+        }
+
+        String letrero = "A[" + n + "][" + m + "]\n";
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+                letrero = letrero + a[i][j] + "  ";
+            }
+            letrero = letrero + "\n";
+        }
+        entrada = JOptionPane.showInputDialog("\n" + letrero + "\nNumero a buscar en la matriz:");
+        busq = Integer.parseInt(entrada);
+
+        int x = 0;
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+
+                if (busq == a[i][j]) {
+                    x++;
+                }
+            }
+        }
+
+        if (x >= 1) {
+            JOptionPane.showMessageDialog(null, "\n" + letrero + "\nEl numero que busca es el: " + busq + "\nNumero de veces que aparece: " + x);
+        } else {
+            JOptionPane.showMessageDialog(null, "\n" + letrero + "El numero no fue encontrado.");
+        }
+    }
+}
+    </pre>
+    <hr>
+    <center>
+        <h4>Código de Ruby</h4>
+    </center>
+    <pre>
+
+    </pre>
 </body>
+
 </html>
