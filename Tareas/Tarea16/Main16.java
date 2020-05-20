@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Tarea 16</title>
-</head>
-
-<body>
-    <span><a href="../Tarea15/T15_Index.html">&lt;- Anterior tarea</a></span>
-    <span style=" margin-left: 30vw;"><a href="../Index_Tareas.html">&lt;- Volver al Index de Tareas.</a></span>
-    <hr>
-    <center>
-        <h3>Descripción de la tarea:</h3>
-        <p>
-            Elaborar un programa en JAVA y RUBY que calcule la
-            multiplicación de dos matrices que ingrese el usuario.
-            (nota: Validar lo que sea necesario para poder realizar
-            la multiplicación de matrices)
-
-        </p>
-    </center>
-    <hr>
-    <center>
-        <h4>Código de Java</h4>
-    </center>
-    <pre>
 import javax.swing.JOptionPane;
 
 public class Main16 {
@@ -91,14 +61,3 @@ public class Main16 {
         }
     }
 }
-    </pre>
-    <hr>
-    <center>
-        <h4>Código de Ruby</h4>
-    </center>
-    <pre>
-
-    </pre>
-</body>
-
-</html>
