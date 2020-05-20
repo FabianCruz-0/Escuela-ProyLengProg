@@ -32,39 +32,44 @@ usando botones: °C -> °F y otro °F -> °C)
     <hr>
     <center><h4>Código de Java</h4></center>
     <pre>
-import java.util.Scanner;
-class Main {
-    public static void main(String[] args) 
-    {
-        int opcion;
-        Scanner scan = new Scanner(System.in);
-        do{
-        System.out.println("Presione 1 para: °C -> °F");
-        System.out.println("Presione 2 para: °F -> °C");
-        scan = new Scanner(System.in);
-        opcion = Integer.parseInt(scan.nextLine());
-        } while (opcion < 1 || opcion >2);
-        //Validación de entrada de opción.
+import javax.swing.JOptionPane;
 
-        if(opcion ==1) //Validación de opción a ejecutar.
-        {
-            System.out.print("Introducir los grados Celsius:");
-            double gradCel = Double.parseDouble(scan.nextLine());
-            double gradFar = (gradCel*1.8) + 32.0;
-            System.out.println("La conversión es: °" + gradFar + "F." ); //Salida.
-            } else {
-            System.out.print("Introducir los grados Farenheit:");
-            double gradFar = Double.parseDouble(scan.nextLine());
-            double gradCel = (gradFar - 32.0) * 5/9;
-            System.out.println("La conversión es: °" + gradCel + "C." ); //Salida.
-            }
+public class Main {
+    public static void main(String[] args) {
+
+        String entrada;
+        int opciones;
+        double X, Y;
+        float z;
+
+        String[] botones = { "Centigrados a Farenheit", "Farenheit a Centigrados" };
+
+        opciones = JOptionPane.showOptionDialog(null, "Elija la conversion que desea", "Grados",
+                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, botones, botones[0]);
+        switch (opciones) {
+            case 0:
+                entrada = JOptionPane.showInputDialog("Ingrese grados celsius: ");
+                z = Integer.parseInt(entrada);
+                X = ((z * 1.8) + 32);
+                JOptionPane.showMessageDialog(null, "Grados farenheit: \n" + X);
+                break;
+            case 1:
+                entrada = JOptionPane.showInputDialog("Ingrese grados farenheit: ");
+                z = Integer.parseInt(entrada);
+                Y = ((z - 32) / 1.8);
+                JOptionPane.showMessageDialog(null, "Grados celsius: \n" + Y);
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Opcion invalida.");
+                break;
+        }
     }
 }
     </pre>
     <hr>
     <center><h4>Código de Ruby</h4></center>
     <pre>
-        
+ 
     </pre>
 </body>
 </html>
