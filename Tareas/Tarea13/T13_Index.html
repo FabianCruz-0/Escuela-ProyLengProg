@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 13</title>
 </head>
+
 <body>
     <span><a href="../Tarea12/T12_Index.html">&lt;- Anterior tarea</a></span>
     <span style=" margin-left: 30vw;"><a href="../Index_Tareas.html">&lt;- Volver al Index de Tareas.</a></span>
@@ -12,8 +16,77 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <div class="container">
+            <p style="text-align: justify;">
+                Elaborar un programa en JAVA y RUBY que realice una
+                búsqueda de un número en un vector, mostrando
+                solamente un mensaje indicando cuantas veces
+                apareció el número. Además de imprimir el vector.<br>
+                 Ejemplo:
+                Valor a buscar: 4<br>
+                “El número 4 aparece 2 veces en el vector: ”<br>
+                (1, 4, 7, 9, 21, 4, 0, 2, 5, 2)
+            </p>
+        </div>
     </center>
     <hr>
+    <center>
+        <h4>Código de Java</h4>
+    </center>
+    <pre>
+import javax.swing.JOptionPane;
+
+public class Main13 {
+    public static void main(String[] args) {
+
+        int n, i, a[], busq;
+        int x;
+        String entrada;
+
+        entrada = JOptionPane.showInputDialog(null, "Tamaño del vector: ");
+        n = Integer.parseInt(entrada);
+        a = new int[n];
+
+        for (i = 0; i < n; i++) {
+            entrada = JOptionPane.showInputDialog(null, "numero: ");
+            a[i] = Integer.parseInt(entrada);
+        }
+
+        String letrero = "Vector =[";
+        for (i = 0; i < n; i++) {
+            if (i == n - 1) {
+                letrero = letrero + a[i] + "].";
+                break;
+            }
+            letrero = letrero + a[i] + ",";
+        }
+        String letrero2 = letrero + "\nNumero a buscar: ";
+
+        x = 0;
+        entrada = JOptionPane.showInputDialog(null, letrero2);
+        busq = Integer.parseInt(entrada);
+        for (i = 0; i < n; i++) {
+            if (busq == a[i]) {
+                x++;
+            }
+        }
+        if (x >= 1) {
+            JOptionPane.showMessageDialog(null,
+                    letrero + "\nEl numero: " + busq + "\nNumero de veces encontrado: " + x);
+        } else {
+            JOptionPane.showMessageDialog(null, letrero + "\nEl numero no fue encontrado");
+        }
+    }
+}
+        
+    </pre>
+    <hr>
+    <center>
+        <h4>Código de Ruby</h4>
+    </center>
+    <pre>
+
+    </pre>
 </body>
+
 </html>
