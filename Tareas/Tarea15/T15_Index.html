@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 15</title>
 </head>
 <body>
     <span><a href="../Tarea14/T14_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +13,65 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <p style="text-align: justify;">Elaborar un programa en JAVA y RUBY que calcule la
+            suma de dos matrices que ingrese el usuario. (nota:
+            Validar lo que sea necesario para poder realizar la
+            suma de matrices).
+        </p>
     </center>
     <hr>
+    <center><h4>Código de Java</h4></center>
+    <pre>
+import javax.swing.JOptionPane;
+
+public class Main15 {
+    public static void main(String[] args) {
+
+        String entrada, letrero = "";
+        int[][] a;
+        int[][] b;
+        int[][] c;
+        int i, j, n, m;
+
+        entrada = JOptionPane.showInputDialog("Numero de filas de sus matrices: ");
+        n = Integer.parseInt(entrada);
+        entrada = JOptionPane.showInputDialog("Numero de columnas de sus matrices: ");
+        m = Integer.parseInt(entrada);
+        a = new int[n][m];
+        b = new int[n][m];
+
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+                entrada = JOptionPane.showInputDialog(null,
+                        "numero de la primera matriz [" + (i + 1) + "][" + (j + 1) + "]");
+                a[i][j] = Integer.parseInt(entrada);
+            }
+        }
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+                entrada = JOptionPane.showInputDialog(null,
+                        "numero de la segunda matriz [" + (i + 1) + "][" + (j + 1) + "]");
+                b[i][j] = Integer.parseInt(entrada);
+            }
+        }
+        c = new int[n][m];
+        letrero = letrero + "La matriz A+B resulta: \n";
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+                letrero = letrero + c[i][j] + " ";
+            }
+            letrero = letrero + "\n";
+        }
+        JOptionPane.showMessageDialog(null, letrero);
+
+    }
+}
+    </pre>
+    <hr>
+    <center><h4>Código de Ruby</h4></center>
+    <pre>
+        
+    </pre>
 </body>
 </html>
