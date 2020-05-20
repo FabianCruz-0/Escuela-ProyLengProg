@@ -16,7 +16,8 @@ public class Main12 {
 		boolean turnPos = true;
 		int contadorNums = 0;
 
-		for (int i = 1; i < n; i++) {
+		for (int i = 1; i < n; i++)
+		{
 			if (turnPos) {
 				for (int y = 1; y <= pos; y++) {
 					if (contadorNums >= n) {
