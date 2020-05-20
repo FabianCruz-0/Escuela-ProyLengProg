@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Tarea </title>
 </head>
 <body>
@@ -12,8 +13,73 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <pre>
+Elabore un programa en JAVA Y RUBY que a través de un Menú de opciones permita al usuario convertir de pesos a las siguientes monedas:
+ 1. Dólar
+ 2. Euro
+ 3. Yen(Japonés)
+ 4. Dólar de Hong Kong
+ (Notas: Las equivalencias deberán definirse dentro del programa. 
+ El cuadro de dialogo para seleccionar que sea usando botones: Dólar, Euro, Yen, DolarHK)
+        </pre>
     </center>
     <hr>
+    <center><h4>Código de Java</h4></center>
+    <pre>
+import javax.swing.JOptionPane;
+public class Main9 {
+    public static void main(String[] args) {
+
+        String entrada;
+        int opcion;
+        double a;
+        float z;
+        String[] botones = { "Dólar", "Euro", "Yen (Japonés) ", "Dólar de Hong Kong" };
+
+        opcion = JOptionPane.showOptionDialog(null, "Convertir pesos MX a: ", "conversion",
+                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, botones, botones[0]);
+
+        switch (opcion) {
+            case 0:
+                entrada = JOptionPane.showInputDialog("pesos MX desea convertir: ");
+                z = Integer.parseInt(entrada);
+                a = z / 19.33;
+                JOptionPane.showMessageDialog(null, "Dolar/es: \n" + a);
+                break;
+
+            case 1:
+                entrada = JOptionPane.showInputDialog("pesos MX desea convertir:");
+                z = Integer.parseInt(entrada);
+                a = z / 21.41;
+                JOptionPane.showMessageDialog(null, "Euro(s): \n" + a);
+                break;
+
+            case 2:
+                entrada = JOptionPane.showInputDialog("pesos MX desea convertir:");
+                z = Integer.parseInt(entrada);
+                a = z / .18;
+                JOptionPane.showMessageDialog(null, "Yen (Japonés): \n" + a);
+                break;
+
+            case 3:
+                entrada = JOptionPane.showInputDialog("pesos MX desea convertir:");
+                z = Integer.parseInt(entrada);
+                a = z / 2.47;
+                JOptionPane.showMessageDialog(null, "Dolar/es Hong Kong: \n" + a);
+                break;
+
+            default:
+                JOptionPane.showMessageDialog(null, "No valida");
+                break;
+
+        }
+    }
+}
+    </pre>
+    <hr>
+    <center><h4>Código de Ruby</h4></center>
+    <pre>
+        
+    </pre>
 </body>
 </html>
