@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tarea 10</title>
 </head>
 <body>
     <span><a href="../Tarea9/T9_Index.html">&lt;- Anterior tarea</a></span>
@@ -12,8 +13,39 @@
     <hr>
     <center>
         <h3>Descripción de la tarea:</h3>
-        <p></p>
+        <p>Construya un programa en JAVA Y RUBY. Que calcule e
+            imprima la siguiente serie para los N primeros
+            términos: 1 , 8 , 243 , 16384 , 1953125...
+        </p>
     </center>
     <hr>
+    <center><h4>Código de Java</h4></center>
+    <pre>
+import javax.swing.JOptionPane;
+
+public class Main10 {
+    public static void main(String[] args) {
+        String entrada;
+        int i, n;
+        double re = 0;
+        entrada = JOptionPane.showInputDialog("cantidad de serie a generar: ");
+        n = Integer.parseInt(entrada);
+        for (i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                re = (Math.pow(i, (i * 2 - 1)));
+            } else {
+
+                re = (Math.pow(i, (i * 2 - 1)));
+            }
+            JOptionPane.showMessageDialog(null, i + ".- " + re);
+        }
+    }
+}
+    </pre>
+    <hr>
+    <center><h4>Código de Ruby</h4></center>
+    <pre>
+        
+    </pre>
 </body>
 </html>
